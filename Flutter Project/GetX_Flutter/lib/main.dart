@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:project_flutter/Home_screen.dart';
-import 'package:project_flutter/inDec_screen.dart';
-import 'package:project_flutter/list_screen.dart';
+import 'package:project_flutter/pages/Home_screen.dart';
+import 'package:project_flutter/pages/inDec_screen.dart';
+import 'package:project_flutter/pages/list_screen.dart';
 
 void main() {
   runApp(const MyApp());
