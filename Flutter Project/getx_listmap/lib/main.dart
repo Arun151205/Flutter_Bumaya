@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:project_flutter/pages/Home_screen.dart';
-import 'package:project_flutter/pages/inDec_screen.dart';
-import 'package:project_flutter/pages/list_screen.dart';
+import 'package:getx_listmap/pages/Home_screen.dart';
+import 'package:getx_listmap/pages/inDec_screen.dart';
+import 'package:getx_listmap/pages/list_screen.dart';
 
 void main() {
   runApp(const MyApp());

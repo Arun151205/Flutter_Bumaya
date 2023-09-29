@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:project_flutter/controller/home_controller.dart';
-// import 'package:project_flutter/second_screen.dart';
+import 'package:getx_listmap/controllers/home_controller.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    HomeController hc = Get.put(HomeController());
+    HomeController homeController = Get.put(HomeController());
     return Scaffold(
       appBar: AppBar(
         title: const Text('Getx'),
@@ -49,45 +48,44 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             children: [
               TextField(
-                controller: hc.namacontroller,
                 decoration: const InputDecoration(labelText: 'Input Nama'),
                 onSubmitted: (value) {
-                  hc.gantiNilai(hc.namacontroller.text);
+                  homeController.gantiNilai(homeController.namacontroller.text);
                   // Get.defaultDialog(
                   //     title: "nama yang di input",
-                  //     middleText: hc.namacontroller.text,
+                  //     middleText: homeController.namacontroller.text,
                   //     onConfirm: () {
                   //       Get.to(const SecondScreen(),
-                  //           arguments: hc.namacontroller.text);
+                  //           arguments: homeController.namacontroller.text);
                   //     });
                 },
               ),
               const SizedBox(
                 height: 10,
               ),
-              // obx(()=> Text(hc.nama.value)),
-              GetBuilder<HomeController>(builder: (hc) {
-                return Text(hc.nama);
+              // obx(()=> Text(homeController.nama.value)),
+              GetBuilder<HomeController>(builder: (homeController) {
+                return Text(homeController.nama);
               }),
               Row(
                 children: [
                   Obx(() => Text(
-                        hc.isOpen.value ? "Open" : "Close",
+                        homeController.isOpen.value ? "Open" : "Close",
                         style: TextStyle(
-                          color: hc.isOpen.value
+                          color: homeController.isOpen.value
                               ? Colors.green
                               : Colors
                                   .red, // Ubah warna teks berdasarkan kondisi "Open" atau "Close"
                         ),
                       )),
                   Obx(() => Switch(
-                        value: hc.isOpen.value,
-                        activeColor: hc.isOpen.value
+                        value: homeController.isOpen.value,
+                        activeColor: homeController.isOpen.value
                             ? Colors.green
                             : Colors
                                 .red, // Ubah warna berdasarkan kondisi "Open" atau "Close"
                         onChanged: (value) {
-                          hc.setIsOpen(value);
+                          homeController.setIsOpen(value);
                         },
                       ))
                 ],

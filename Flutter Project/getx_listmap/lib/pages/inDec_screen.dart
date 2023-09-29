@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:project_flutter/controller/home_controller.dart';
+import 'package:getx_listmap/controllers/home_controller.dart';
 
 class InDecScreen extends StatelessWidget {
   const InDecScreen({super.key});
