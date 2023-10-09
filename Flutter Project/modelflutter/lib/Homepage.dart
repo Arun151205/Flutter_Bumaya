@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:modelflutter/screen_dua.dart';
-import 'package:modelflutter/screen_satu.dart';
+import 'package:get/get.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
@@ -17,8 +16,7 @@ class Homepage extends StatelessWidget {
           children: <Widget>[
             ElevatedButton(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => ScreenSatu()));
+                Get.toNamed("/ScreenPertama");
               },
               child: Text('Tombol Pertama'),
             ),
@@ -27,11 +25,18 @@ class Homepage extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => ScreenDua()));
+                Get.toNamed("/ScreenKedua");
               },
               child: Text('Tombol Kedua'),
             ),
+            SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  Get.toNamed("/ScreenKetiga");
+                },
+                child: Text('Tombol Ketiga'))
           ],
         ),
       ),
