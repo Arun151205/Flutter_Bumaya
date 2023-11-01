@@ -9,6 +9,7 @@ import 'package:http/http.dart' as http;
 class SatuController extends GetxController {
   RxBool isLoading = false.obs;
   Rx<List<ModelSatu>> listsatu = Rx<List<ModelSatu>>([]);
+
   @override
   void onInit() {
     getData();
