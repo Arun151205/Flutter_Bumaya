@@ -19,7 +19,7 @@ class Beranda extends StatelessWidget {
           "Pengaduan Masyarakat",
           style: TextStyle(color: Colors.white),
         ),
-        backgroundColor: Colors.cyanAccent,
+        backgroundColor: Colors.cyan,
       ),
       body: Container(
           padding: const EdgeInsets.all(20),

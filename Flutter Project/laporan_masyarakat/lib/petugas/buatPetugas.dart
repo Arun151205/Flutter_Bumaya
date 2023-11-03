@@ -20,9 +20,9 @@ class BuatPetugas extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         iconTheme: const IconThemeData(color: Colors.white),
-        backgroundColor: Colors.lightGreen,
-        title: const Text("Pengaduan Masyarakat",
-            style: TextStyle(color: Colors.white)),
+        backgroundColor: Colors.cyan,
+        title:
+            const Text("Create Petugas", style: TextStyle(color: Colors.white)),
       ),
       body: Container(
         padding: const EdgeInsets.all(20),

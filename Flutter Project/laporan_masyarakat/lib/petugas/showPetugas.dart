@@ -12,8 +12,8 @@ class ShowPetugas extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
           iconTheme: const IconThemeData(color: Colors.white),
-          backgroundColor: Colors.lightGreen,
-          title: const Text("Pengaduan Masyarakat",
+          backgroundColor: Colors.cyan,
+          title: const Text("Show Petugas",
               style: TextStyle(color: Colors.white))),
       body: Container(
         padding: const EdgeInsets.all(20),
