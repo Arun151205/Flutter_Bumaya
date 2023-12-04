@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:laporan_masyarakat/beranda.dart';
 import 'package:laporan_masyarakat/masyarakat/buat.dart';
-import 'package:laporan_masyarakat/pengaduan/buatPengaduan.dart';
 import 'package:laporan_masyarakat/petugas/buatPetugas.dart';
 import 'package:laporan_masyarakat/masyarakat/edit.dart';
 import 'package:laporan_masyarakat/masyarakat/show.dart';
@@ -27,7 +26,6 @@ class MyApp extends StatelessWidget {
         GetPage(name: "/buatPetugas", page: () => const BuatPetugas()),
         GetPage(name: "/showPetugas", page: () => const ShowPetugas()),
         GetPage(name: "/editPetugas", page: () => const EditPetugas()),
-        GetPage(name: "/buatPengaduan", page: () => const BuatPengaduan()),
       ],
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(

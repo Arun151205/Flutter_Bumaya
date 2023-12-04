@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:laporan_masyarakat/controllers/masyarakatController.dart';
 import 'package:laporan_masyarakat/controllers/petugasController.dart';
+import 'package:laporan_masyarakat/controllers/pengaduanController.dart';
 
 class Beranda extends StatelessWidget {
   const Beranda({super.key});
@@ -12,6 +13,7 @@ class Beranda extends StatelessWidget {
   Widget build(BuildContext context) {
     MasyarakatController masyarakatController = Get.put(MasyarakatController());
     PetugasController petugasController = Get.put(PetugasController());
+    PengaduanController pengaduanController = Get.put(PengaduanController());
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -134,6 +136,30 @@ class Beranda extends StatelessWidget {
                     ),
                   ),
                 ),
+                Obx(() => pengaduanController.loading.value
+                    ? const Center(
+                        child: CircularProgressIndicator(),
+                      )
+                    : ListView.builder(
+                        shrinkWrap: true,
+                        itemCount: pengaduanController.data.length,
+                        itemBuilder: (context, i) {
+                          return GestureDetector(
+                            onTap: () {
+                              Get.toNamed("/showPetugas",
+                                  arguments: {"index": i});
+                            },
+                            child: ListTile(
+                              splashColor: Colors.green,
+                              leading: CircleAvatar(
+                                  radius: 30, child: Text("${i + 1}")),
+                              title: Text("${pengaduanController.data[i].nik}"),
+                              subtitle: Text(
+                                  "${pengaduanController.data[i].isiLaporan}"),
+                            ),
+                          );
+                        },
+                      )),
               ],
             ),
           )),
